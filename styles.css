@@ -1,0 +1,321 @@
+/* General Styles */
+/* Set a background image for the entire page */
+body {
+    background-image: url('FOREST.png'); /* Path to your image */
+    background-size: cover; /* Scale the image to cover the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Make the background image stay fixed when scrolling */
+    color: #fff; /* Optional: Set text color to white for better readability on dark images */
+}
+
+header {
+    background-color: darkgreen; /* Brighter green for header */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 100px;
+   
+}
+
+h1 {
+    color: #fff; /* White color for header text */
+    font-size: 80px;
+    text-align: center;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  
+}
+
+h2 {
+    color: white; /* Darker color for sub-headers */
+    font-size: 18px;
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+
+   
+}
+
+h3 {
+    color: white; /* Darker color for section headers */
+    font-size: 40px;
+    text-align: center;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+   
+}
+
+h4 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+   
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    max-width: 900px; 
+    margin: 20px auto; 
+    border: 4px solid; 
+    border-radius: 10px; 
+}
+
+.slideshow {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px; 
+}
+
+.caption {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 5px;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+#more {
+    display: block; 
+    width: fit-content; 
+    margin: 20px auto; 
+    padding: 10px 20px;
+    background-color: #f7f7f7; 
+    color: darkgreen;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center; 
+}
+
+}
+
+#more:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Gallery Styles */
+.gallery {
+    padding: 20px;
+    text-align: center;
+    background-color: darkgreen; 
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery-item {
+    width: calc(25% - 30px); 
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; 
+    transition: transform 0.3s ease;
+}
+
+.gallery-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; 
+    background-color: green;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    text-align: center; 
+    
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+    .gallery-item {
+        width: calc(50% - 30px); 
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-item {
+        width: 100%; 
+    }
+}
+
+
+/* Additional Styles */
+ul {
+    color: #333; 
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: darkgreen; 
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+    
+}
+
+/* Fact Cards Styles */
+.fact-cards {
+    max-width: 60%;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.card {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: darkgreen;
+    color:white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+}
+
+.card-header:hover {
+    background-color:rgb(10, 107, 10);
+}
+
+.card-content {
+    padding: 10px;
+    display: none;
+    background-color:grey;
+    border-top: 1px solid #ddd;
+}
+
+/* Styles for the Featured Image Section */
+.featured-image {
+    text-align: center; /* Center-aligns text and image */
+    margin: 20px auto; /* Adds spacing around the section */
+}
+
+.featured-image h3 {
+    font-family: 'New Amsterdam', sans-serif; /* Adjust font family if needed */
+    margin-bottom: 10px; /* Space between heading and image */
+    text-decoration: underline;
+}
+
+.featured-image img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners to the image */
+}
+
+.featured-image p {
+    font-family: 'PT Sans', sans-serif; /* Adjust font family if needed */
+    margin-top: 10px; /* Space between image and text */
+    color:white; /* Optional: adjust text color */
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anteater Antics - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <body>
+    <header>
+        <h1>Anteater Antics</h1>
+    </header>
+
+ <!-- Main Content -->
+ <h2>Welcome to Anteater Antics, your ultimate destination for all things anteater! Our website is dedicated to providing you with fascinating facts about these unique and captivating creatures, as well as raising awareness about the importance of their conservation.</h2>
+
+    <!-- Slideshow -->
+    <section class="slideshow-container">
+        <div class="slideshow">
+            <div class="slide fade">
+                <img src="ANT1.jpg" alt="Giant Anteater">
+                <div class="caption">Giant Anteater</div>
+            </div>
+            <div class="slide fade">
+                <img src="ANTSILK.jpg" alt="Silky Anteater">
+                <div class="caption">Silky Anteater</div>
+            </div>
+            <div class="slide fade">
+                <img src="STAM.jpg" alt="Southern Tamandua">
+                <div class="caption">Southern Tamandua</div>
+            </div>
+            <div class="slide fade">
+                <img src="NTAM.jpg" alt="Northern Tamandua">
+                <div class="caption">Northern Tamandua</div>
+            </div>
+            <div class="slide fade">
+                <img src="ANT8.jpg" alt="Giant Anteater">
+                <div class="caption">Giant Anteater</div>
+            </div>
+            <div class="slide fade">
+                <img src="ANT7.jpeg" alt="Giant Anteater">
+                <div class="caption">Southern Tamandua</div>
+            </div>
+            <div class="slide fade">
+                <img src="ANT6.jpg" alt="Giant Anteater">
+                <div class="caption">Giant Anteater</div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+
+    <!-- Fact Cards -->
+    <section class="fact-cards">
+        <h4>Fascinating Facts About Anteaters</h4>
+        <p>Did you know that there are 4 species of anteater? Click on the different types below to discover a fun fact!</p>
+        <div class="card">
+            <button class="card-header">Giant Anteater</button>
+            <div class="card-content">
+                <p>The giant anteater is the largest species of anteater and can consume up to 30,000 ants in a single day!</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <button class="card-header">Silky Anteater</button>
+            <div class="card-content">
+                <p>The silky anteater, also known as the pygmy anteater, is the smallest species and is known for its soft, silky fur.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <button class="card-header">Southern Tamandua</button>
+            <div class="card-content">
+                <p>The southern tamandua is often found in trees, and its powerful forelimbs make it an excellent climber.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <button class="card-header">Northern Tamandua</button>
+            <div class="card-content">
+                <p>The northern tamandua is primarily nocturnal and uses its strong sense of smell to locate food in the dark.</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- New Section with Image and Heading -->
+<section class="featured-image">
+    <h3>Threats to survival</h3>
+    <p>Anteaters face significant threats to their survival, largely due to habitat loss, deforestation, and human-wildlife conflict. The Giant Anteater, for instance, is classified as vulnerable due to its declining population in parts of Central and South America. Similarly, the Silky Anteater and the Tamanduas are also at risk, primarily from habitat destruction and illegal hunting. Conservation efforts are crucial to protect these unique creatures and their habitats, as their decline not only affects the biodiversity of their ecosystems but also signifies broader environmental challenges. Preserving anteater populations is essential for maintaining ecological balance and ensuring the survival of these fascinating species for future generations.</p>
+    <img src="scale.png" alt="Anteater World">
+</section>
+
+    <main>
+        <aside>
+            <article>
+                <p>Explore our site to learn more about anteater species, their habitats, and their importance in the ecosystem.</p>
+                <article>
+                    <p> Discover fascinating facts about these unique creatures and learn about their conservation.</p>
+                    <a href="facts.html" id="more">Learn More About Anteaters</a>
+                </article>
+            </article>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Anteater Antics. All rights reserved.</p>
+    </footer>
+
+   <!-- JavaScript for Slideshow and Fact Cards -->
+<script>
+    // Slideshow Script
+    let slideIndex = 0;
+    showSlides();
+
+    function plusSlides(n) {
+        slideIndex += n;
+        showSlides();
+    }
+
+    function showSlides() {
+        const slides = document.querySelectorAll('.slide');
+        if (slideIndex >= slides.length) {slideIndex = 0}
+        if (slideIndex < 0) {slideIndex = slides.length - 1}
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+    }
+
+    // Fact Cards Script
+    const cardHeaders = document.querySelectorAll('.card-header');
+
+    cardHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+   </script>
+  </body>
+ </html>
+</head>
